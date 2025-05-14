@@ -1,0 +1,171 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Harish Nanjala's CV},
+    pdfauthor={Harish Nanjala},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+% Environment for bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+}
+
+\newcommand{\placelastupdatedtext}{
+  \AddToShipoutPictureFG*{
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}
+  }
+}
+
+\begin{document}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont HARISH NANJALA
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{Durham, NC}%
+        \kern 5.0 pt%
+        |%
+        \kern 5.0 pt%
+        \mbox{\href{mailto:harish.nanjala@duke.edu}{harish.nanjala@duke.edu}}%
+        \kern 5.0 pt%
+        |%
+        \kern 5.0 pt%
+        \mbox{\href{tel:+1-628-224-0660}{(628) 224-0660}}%
+
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+    \section{EDUCATION}
+    % -- Duke --
+    \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
+      \textbf{DUKE UNIVERSITY, The Fuqua School of Business} & Durham, NC \\
+      Master of Business Administration - Strategy concentration (3-year STEM OPT extension) & May 2025 \\
+    \end{tabularx}
+    \begin{highlights}
+      \item \textbf{Academics:} GMAT: 760 (top 1\% of test takers); Fuqua School of Business Merit Scholarship recipient
+      \item \textbf{Leadership Positions:} Investor at Duke Capital Partners (40 students each batch selected to manage \$75 million AUM; executed 10 deals per year, with investments from \$400K to \$5 million); Consulting Club, Communications Lead; Association of Women in Business, VP of Leadership; South Asian Business Club, Communications and External Relations Chair; Admissions Ambassador (Interviewer)
+    \end{highlights}
+
+    % -- Nirma --
+    \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
+      \textbf{NIRMA UNIVERSITY, Institute of Technology} & Ahmedabad, India \\
+      Bachelor of Technology, Civil Engineering & May 2019 \\
+    \end{tabularx}
+    \begin{highlights}
+      \item \textbf{Academics:} Top 2\% in JEE mains entrance test (one of India's competitive engineering entrance exams with 1.2 million takers); Merit Scholarship Recipient (competitive, awarded to only the top 8\% of the class)
+      \item \textbf{Leadership Positions:} Ogin Cultural University Levels Club, Founder and President (promotes peer-to-peer learning for 12K+ students); TEDx near my university, Chair (spearheaded the TEDx Talk initiative that garnered 3 million+ views)
+    \end{highlights}
+
+
+    \section{EXPERIENCE}
+    \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
+      \textbf{IDEA FUND PARTNERS} & Chapel Hill, NC \\
+      Venture Capital Summer Associate & June--August 2024 \\
+    \end{tabularx}
+    \begin{highlights}
+      \item Working with a \$100 million AUM VC fund in identifying and assessing 75 early-stage startups in SaaS and FinTech, conducting founder interviews, and performing industry analysis including market sizing and financial modeling
+    \end{highlights}
+
+    \begin{tabularx}{\linewidth}{@{}X@{\hspace{1em}}r@{}}
+      \textbf{AUGEN MEDIA WORKS (Marketing Consulting Firm)} & Ahmedabad, India \\
+      Co-Founder and CEO & 2016--2023 \\
+    \end{tabularx}
+    \begin{highlights}
+      \item Bootstrapped Augen Media Works to \$2M revenue, with 32 employees serving 500+ clients across 30+ industries by expanding branding, digital, print, and out-of-home advertising capabilities in 14 Indian cities and 3 countries
+      \item Increased employee retention to 57\% (vs. industry avg. 30\%) by optimizing agency collaborations and implementing the Mentorship Ownership Performance model, fostering expert talks, mental health workshops, and creative autonomy
+      \item \textbf{Consulting Engagement Examples:}
+      \item Generated \$8.7M in revenue and secured a \$92K 3-year retainer deal by advising the Marketing Director of a leading manufacturer to transition to digital platforms, expanding their client base from 48 to 65 countries
+      \item Tripled a leading real estate account by managing a \$500K marketing budget, generating 21,000+ leads, and converting 160+ properties worth \$30M within one year
+      \item Contributed to 15\% of revenue share by leading global expansion efforts, serving 45+ clients in the US, UAE, and South Africa, and paving the way for market entry in Australia, UK, Canada, and Singapore
+    \end{highlights}
+
+    \section{AWARDS \& RECOGNITION}
+    \begin{highlights}
+      \item Recognized as a "30 Under 30 Entrepreneur" by Entrepreneurs Today, India edition, 2022.
+      \item Awarded Silicon India Startup City magazine's "10 Best Creative Advertising Startups" recognition, 2022.
+      \item Honored with "Entrepreneur of the Year 2021-22" award by Indian Achievers Forum.
+      \item Winner of "Global Student Entrepreneur Awards" 2016, event organized in 61 countries with 60k+ participants.
+    \end{highlights}
+
+    \section{ADDITIONAL INFORMATION}
+    \begin{highlights}
+      \item \textbf{Innovation:} Mentored and scaled 11 startups at IIMA Ventures (startup incubator of India's leading b-school, IIM-Ahmedabad).
+      \item \textbf{Pro-bono services:} Launched "Sheroics," an initiative to help low-to-middle-income women entrepreneurs sustainably start and scale ventures (as part of Augen); launched "VEW Educare," an initiative to enable access to higher education for children from underserved communities (sponsor 8-10 students each year, raised \$0.56M and aim to reach 200 children by 2030).
+      \item \textbf{Hobbies and Interests:} Travel (visited 105 cities globally); Agriculture (cultivated 5 crops); Wildlife Photography (captured diverse wildlife); Cooking (mastered 20+ Indian dishes); MBA Application Process (coached 8 applicants to top 10 MBA programs).
+    \end{highlights}
+
+\end{document} 
