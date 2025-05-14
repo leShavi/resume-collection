@@ -1,0 +1,174 @@
+\documentclass[9pt, letterpaper]{article}
+
+% Packages
+\usepackage[
+    ignoreheadfoot,
+    top=1.3cm,
+    bottom=1.3cm,
+    left=2cm,
+    right=2cm,
+    footskip=0.6cm,
+]{geometry}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Feifan (Ariel) Yao's CV},
+    pdfauthor={Feifan (Ariel) Yao},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.15cm}{0.1cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
+% Environment for bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.02cm,
+        parsep=0.02cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.25}
+}{
+    \par\kern\topsep
+}
+
+% \newcommand{\placelastupdatedtext}{ % Removed as per thought process
+%   \AddToShipoutPictureFG*{
+%     \put(
+%         \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+%         \LenToUnit{\paperheight-1.0 cm}
+%     ){\vtop{{\null}\makebox[0pt][c]{
+%         \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+%     }}}
+%   }
+% }
+
+\begin{document}
+
+    \begin{header}
+        \fontsize{14pt}{14pt}\selectfont FEIFAN (ARIEL) YAO
+
+        \vspace{1pt}
+
+        \normalsize
+        \mbox{Ann Arbor, MI}%
+        \kern 5.0 pt%
+        |%
+        \kern 5.0 pt%
+        \mbox{\href{mailto:afyao@umich.edu}{afyao@umich.edu}}%
+    \end{header}
+
+    \vspace{-0.2cm}
+
+    \section{EDUCATION}
+    % -- University of Michigan --
+    \noindent\textbf{UNIVERSITY OF MICHIGAN, Stephen M. Ross School of Business} \hfill Ann Arbor, MI \\
+    Master of Business Administration (MBA) – Concentration: Strategy and Operations \hfill Class of 2027
+    \begin{highlights}
+        \item Merit-Based Scholarship recipient based on strong academic and professional achievement.
+    \end{highlights}
+
+    \vspace{0.1cm}
+
+    % -- New York University --
+    \noindent\textbf{NEW YORK UNIVERSITY (NYU)} \hfill New York, NY \\
+    Bachelor of Arts (B.A.) in Economics \hfill Class of 2020
+    \begin{highlights}
+        \item \textbf{Honors \& Awards:} Received 50\% Merit Scholarship (98th percentile SAT); Won Silver Medal, Best Stock Pitch Competition (vs. 10 teams), Smart Women Securities Club.
+        \item \textbf{Leadership Positions:} Elected Board Member, Junior Class Student Government (1 of 8 elected); Founder \& Chair, NYU Career Development Speaker Series (led 4-person team, university-wide series, 100+ attendees/session); Member of Stern Management Consulting Club, and Stern Women in Business.
+    \end{highlights}
+
+    \section{EXPERIENCE}
+    \noindent\textbf{OIOI DESIGNS} \hfill Nanjing, China \\
+    Director - Digital Transformation \hfill Jan 2024 – Apr 2025
+    \begin{highlights}
+        \item Led a company-wide digital transformation by defining strategic objectives with department heads and re-engineering core processes, resulting in enhanced operational efficiency and a 30\% reduction in errors.
+        \item Drove the evolution of the firm's design services by incorporating interactive UI/UX capabilities; delivered enhanced digital proposals that contributed to a 33\% projected revenue increase and secured 3 new clients.
+    \end{highlights}
+
+    \vspace{0.1cm}
+
+    \noindent\textbf{IBM CONSULTING} \hfill Shanghai, China \\
+    Consultant (previously Associate Consultant) \hfill Aug 2021 – Nov 2023
+    \begin{highlights}
+        \item Received fast-track promotion to Associate Consultant within one year (top 5\% of \textasciitilde500-person cohort).
+        \item Delivered impactful solutions for clients across diverse industries (retail, consumer products) and geographies (China, UK, India, Vietnam), leading teams in sales, manufacturing, and supply chain.
+        \item Select Project Experience:
+        \item \hspace{5pt} \textbf{Global Footwear OEM (Adidas Partner):} Steered a strategic digital transformation by re-engineering internal processes to shorten development cycles and bolster supply chain resilience to meet Adidas' evolving needs; as Acting PM for the international SAP rollout, prevented \$1M in delays and delivered solutions achieving RMB 43M (43.3\% ROI) in operational improvements.
+        \item \hspace{5pt} \textbf{Global Automotive Aftermarket (SKF):} Advised SKF, a leading global automotive components manufacturer, on its digital aftermarket strategy for China; developed a data-driven roadmap including targeted customer segmentation and platform architecture, projected to boost digital customer coverage from 5\% to 30\% and cut operational costs by 15\%.
+    \end{highlights}
+
+    \vspace{0.1cm}
+
+    \noindent\textbf{KAYENCHEM} \hfill Nanjing, China \\
+    Strategic Planning (reporting directly to CEO) \hfill Feb 2020 – May 2021
+    \begin{highlights}
+        \item Led a team of 2 to develop and implement a "deep processing" sales strategy, capturing 6\% market share (\$68.7M USD market) and increasing company profit margin by 10\%.
+        \item Spearheaded the creation and launch of a new 'Pigment Yellow' product line from ideation to market, securing 8\% of a \$75.5M USD market and achieving \$6M in initial sales.
+    \end{highlights}
+
+    \section{LEADERSHIP EXPERIENCE}
+    \noindent\textbf{ABC SOCIAL IMPACT CONSULTING} \hfill China \\
+    Project Manager \& Senior Consultant (Pro-bono)
+    \begin{highlights}
+        \item Led pro-bono consulting teams for non-profits: guided a vocational school in developing an AI implementation strategy to enhance educational offerings, and advised a children's charity on digital transformation to improve operational efficiency and data management. Delivered strategic roadmaps, and managed project execution.
+    \end{highlights}
+
+    \vspace{0.1cm}
+
+    \noindent\textbf{NY HANFU SOCIETY (NGO)} \hfill New York, NY \\
+    Event Organizer \& Leader
+    \begin{highlights}
+        \item Co-led event planning and execution for the NY Hanfu Society, managing a team of 10 organizers and a budget to deliver successful cultural events, such as the Spring Fest Chinese music performance.
+    \end{highlights}
+
+    \section{ADDITIONAL INFORMATION}
+    \begin{highlights}
+        \item \textbf{Languages:} Chinese (Mandarin - Native, Cantonese - Basic), French (Basic).
+        \item \textbf{Interests:} Guzheng Player (Won Silver, International Chinese Arts Festival – Singapore), Travel Enthusiast (20+ states in the US, 30+ cities in China, Hong Kong SAR, Mexico, Thailand, Singapore).
+    \end{highlights}
+
+\end{document}
